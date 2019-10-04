@@ -61,8 +61,8 @@
 		55B0E6022347E6B0000806BC = {
 			isa = PBXGroup;
 			children = (
-				55B0E60D2347E6B0000806BC /* PhotoJounralProject */,
-				55B0E6242347E6B1000806BC /* PhotoJounralProjectTests */,
+				55B0E60D2347E6B0000806BC /* PhotoJournalProject */,
+				55B0E6242347E6B1000806BC /* PhotoJournalProjectTests */,
 				55B0E60C2347E6B0000806BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,7 +76,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		55B0E60D2347E6B0000806BC /* PhotoJounralProject */ = {
+		55B0E60D2347E6B0000806BC /* PhotoJournalProject */ = {
 			isa = PBXGroup;
 			children = (
 				55B0E60E2347E6B0000806BC /* AppDelegate.swift */,
@@ -87,16 +87,16 @@
 				55B0E6192347E6B1000806BC /* LaunchScreen.storyboard */,
 				55B0E61C2347E6B1000806BC /* Info.plist */,
 			);
-			path = PhotoJounralProject;
+			path = PhotoJournalProject;
 			sourceTree = "<group>";
 		};
-		55B0E6242347E6B1000806BC /* PhotoJounralProjectTests */ = {
+		55B0E6242347E6B1000806BC /* PhotoJournalProjectTests */ = {
 			isa = PBXGroup;
 			children = (
 				55B0E6252347E6B1000806BC /* PhotoJounralProjectTests.swift */,
 				55B0E6272347E6B1000806BC /* Info.plist */,
 			);
-			path = PhotoJounralProjectTests;
+			path = PhotoJournalProjectTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +156,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 55B0E6062347E6B0000806BC /* Build configuration list for PBXProject "PhotoJounralProject" */;
+			buildConfigurationList = 55B0E6062347E6B0000806BC /* Build configuration list for PBXProject "PhotoJournalProject" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -437,7 +437,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		55B0E6062347E6B0000806BC /* Build configuration list for PBXProject "PhotoJounralProject" */ = {
+		55B0E6062347E6B0000806BC /* Build configuration list for PBXProject "PhotoJournalProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55B0E6282347E6B1000806BC /* Debug */,
