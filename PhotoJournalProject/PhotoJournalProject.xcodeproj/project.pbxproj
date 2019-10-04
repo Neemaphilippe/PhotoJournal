@@ -14,6 +14,7 @@
 		55B0E6182347E6B1000806BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B0E6172347E6B1000806BC /* Assets.xcassets */; };
 		55B0E61B2347E6B1000806BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B0E6192347E6B1000806BC /* LaunchScreen.storyboard */; };
 		55B0E6262347E6B1000806BC /* PhotoJounralProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0E6252347E6B1000806BC /* PhotoJounralProjectTests.swift */; };
+		55B0E6312347F2F1000806BC /* addPhotoEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0E6302347F2F1000806BC /* addPhotoEntryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		55B0E6212347E6B1000806BC /* PhotoJounralProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoJounralProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B0E6252347E6B1000806BC /* PhotoJounralProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJounralProjectTests.swift; sourceTree = "<group>"; };
 		55B0E6272347E6B1000806BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B0E6302347F2F1000806BC /* addPhotoEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPhotoEntryVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				55B0E60E2347E6B0000806BC /* AppDelegate.swift */,
 				55B0E6102347E6B0000806BC /* SceneDelegate.swift */,
 				55B0E6122347E6B0000806BC /* ViewController.swift */,
+				55B0E6302347F2F1000806BC /* addPhotoEntryVC.swift */,
 				55B0E6142347E6B0000806BC /* Main.storyboard */,
 				55B0E6172347E6B1000806BC /* Assets.xcassets */,
 				55B0E6192347E6B1000806BC /* LaunchScreen.storyboard */,
@@ -202,6 +205,7 @@
 			files = (
 				55B0E6132347E6B0000806BC /* ViewController.swift in Sources */,
 				55B0E60F2347E6B0000806BC /* AppDelegate.swift in Sources */,
+				55B0E6312347F2F1000806BC /* addPhotoEntryVC.swift in Sources */,
 				55B0E6112347E6B0000806BC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
