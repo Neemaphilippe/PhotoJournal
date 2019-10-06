@@ -77,53 +77,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0gM-vA-YCB">
-                                <rect key="frame" x="87" y="200" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0gM-vA-YCB">
+                                <rect key="frame" x="87" y="130" width="240" height="293"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="oFp-9L-CGV"/>
-                                    <constraint firstAttribute="width" constant="240" id="sQ2-z0-o4Y"/>
+                                    <constraint firstAttribute="width" constant="240" id="AEb-n0-KBb"/>
+                                    <constraint firstAttribute="height" constant="293" id="S6L-A9-lVy"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKC-zk-ImP">
-                                <rect key="frame" x="95" y="510" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGt-VQ-cvt">
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="1uV-S9-qGd"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Fkb-mR-RNM"/>
+                                    <barButtonItem title="Photo Library" id="1uV-S9-qGd"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Aea-QB-HnD"/>
+                                    <barButtonItem title="Camera" id="ZGz-ib-cay"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3fH-U7-nYE"/>
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO0-Ft-SHI">
                                 <rect key="frame" x="19" y="44" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancelButtonPressed:" destination="e5h-K4-z2M" eventType="touchUpInside" id="uFB-Qb-9U3"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBh-kL-M5n">
                                 <rect key="frame" x="354" y="44" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveButtonPressed:" destination="e5h-K4-z2M" eventType="touchUpInside" id="d3P-RQ-7w5"/>
-                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nKC-zk-ImP">
+                                <rect key="frame" x="79" y="476" width="256" height="248"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0gM-vA-YCB" firstAttribute="centerX" secondItem="Jmo-W4-baU" secondAttribute="centerX" id="0G0-P4-PMr"/>
+                            <constraint firstItem="Jmo-W4-baU" firstAttribute="trailing" secondItem="nKC-zk-ImP" secondAttribute="trailing" constant="79" id="5ay-Jr-zBp"/>
+                            <constraint firstItem="nKC-zk-ImP" firstAttribute="top" secondItem="0gM-vA-YCB" secondAttribute="bottom" constant="53" id="8cj-nY-yVP"/>
+                            <constraint firstItem="nKC-zk-ImP" firstAttribute="centerX" secondItem="Jmo-W4-baU" secondAttribute="centerX" id="9Io-Tz-hnp"/>
+                            <constraint firstItem="nKC-zk-ImP" firstAttribute="centerX" secondItem="Jmo-W4-baU" secondAttribute="centerX" id="Afi-dB-xH7"/>
+                            <constraint firstItem="Jmo-W4-baU" firstAttribute="bottom" secondItem="nKC-zk-ImP" secondAttribute="bottom" constant="138" id="EDd-k3-LnU"/>
+                            <constraint firstItem="0gM-vA-YCB" firstAttribute="top" secondItem="Jmo-W4-baU" secondAttribute="top" constant="86" id="NBP-Tf-qrC"/>
+                            <constraint firstItem="Jmo-W4-baU" firstAttribute="trailing" secondItem="0gM-vA-YCB" secondAttribute="trailing" constant="87" id="Yt4-MP-QwS"/>
+                            <constraint firstItem="nKC-zk-ImP" firstAttribute="leading" secondItem="Jmo-W4-baU" secondAttribute="leading" constant="79" id="gm7-EN-8IP"/>
+                            <constraint firstItem="0gM-vA-YCB" firstAttribute="leading" secondItem="Jmo-W4-baU" secondAttribute="leading" constant="87" id="tr9-bD-3qZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Jmo-W4-baU"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5X-24-d0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="119"/>
+            <point key="canvasLocation" x="847.82608695652175" y="118.52678571428571"/>
         </scene>
     </scenes>
 </document>
