@@ -11,7 +11,7 @@ struct PhotosPersistenceHelper {
     private init() {}
     static let manager = PhotosPersistenceHelper()
     
-    private let persistenceHelper = PersistenceHelper<Photo>(fileName: "photossssss.plist")
+    private let persistenceHelper = PersistenceHelper<Photo>(fileName: "allphotos.plist")
     
     func savePhoto(photo: Photo) throws {
         try persistenceHelper.save(newElement: photo)

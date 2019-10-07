@@ -47,12 +47,10 @@ class ViewController: UIViewController {
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
             self.deletePhoto(with: id)
         })
-        //This is a closure. When the delete button is pressed, we are performing some kind of closure action. In this case, we are running our deletePhotos function.
         
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         actionSheet.addAction(cancelAction)
         actionSheet.addAction(deleteAction)
-        
         self.present(actionSheet, animated: true, completion: nil)
     }
     
@@ -92,7 +90,7 @@ extension ViewController: UICollectionViewDataSource{
     
 }
 
-extension ViewController: UICollectionViewDelegateFlowLayout { //has function in it that lets us adjust size/dimensions of the cell
+extension ViewController: UICollectionViewDelegateFlowLayout { 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 360, height: 460)
     }
