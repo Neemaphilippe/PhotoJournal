@@ -10,6 +10,20 @@ import UIKit
 
 class PhotoCell: UICollectionViewCell {
     
-    @IBOutlet weak var photoCellImage: UIView!
+    @IBOutlet weak var photoCellImage: UIImageView!
+    
+    @IBOutlet weak var photoDescriptionLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var optionsButton: UIButton!
+    
+    var buttonFunction: (()->Void)?
+    
+    @IBAction func optionsButtonPressed(_ sender: UIButton) {
+        if let closure = buttonFunction {
+            closure()
+        }
+    }
     
 }

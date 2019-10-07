@@ -9,21 +9,18 @@
 import UIKit
 
 class addPhotoEntryVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
-    @IBAction func cancelButtonPressed(_ sender: UIButton) {
-    }
-    
-    
-    @IBAction func saveButtonPressed(_ sender: UIButton) {
-    }
-    
-    
+    //MARK: -- Outlets
     @IBOutlet weak var photoTextView: UITextView!
-    
-    
     @IBOutlet weak var photoImage: UIImageView!
     
+    //MARK: --IBActions
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+       savesPhotos()
+    }
     @IBAction func photoLibraryPressed(_ sender: Any) {
         let image = UIImagePickerController()
         image.delegate = self
@@ -35,6 +32,7 @@ class addPhotoEntryVC: UIViewController, UINavigationControllerDelegate, UIImage
         
     }
     
+    //MARK: -- Functions
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             photoImage.image = image
@@ -44,29 +42,26 @@ class addPhotoEntryVC: UIViewController, UINavigationControllerDelegate, UIImage
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func cameraPressed(_ sender: Any) {
+    
+    func savesPhotos(){
+        guard let photoDescriptionText = photoTextView.text else { return }
+        guard let image = photoImage.image else { return }
+        guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
+        let newPhoto = Photo(description: photoDescriptionText, image: imageData, date: Photo.getDate(), id: Photo.getIDForNewPhoto() )
+        
+        do {
+            try? PhotosPersistenceHelper.manager.savePhoto(photo: newPhoto)
+        }
+        
+        DispatchQueue.main.async {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
-    
-    
-    
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-    
-
-
-
 }
-//extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-//
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        guard let image = info[.originalImage] as? UIImage else {return}
-////        photoImage = image
-//
-//        dismiss(animated: true, completion: nil)
-//    }
-//
-//}
+
 
