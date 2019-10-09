@@ -18,6 +18,7 @@ class ViewController: UIViewController {
             
         }
     }
+    var darkModeIsOn = false
 
     @IBOutlet weak var photoView: UICollectionView!
     
@@ -31,8 +32,9 @@ class ViewController: UIViewController {
 
     
     @IBAction func gearButtonPressed(_ sender: UIBarButtonItem) {
-        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
-        let gearSeg = storyboardd.instantiateViewController(withIdentifier: "settingsVC") as? SettingsVC
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let gearSeg = storyboard.instantiateViewController(withIdentifier: "settingsVC") as? SettingsVC
+        gearSeg?.modalPresentationStyle = .fullScreen
         present(gearSeg!, animated: true, completion: nil)
         
         
@@ -96,6 +98,8 @@ extension ViewController: UICollectionViewDataSource{
         cell.photoDescriptionLabel.text = specificPhoto.description
         cell.buttonFunction = {self.presentsActionSheet(id: specificPhoto.id)}
         cell.dateLabel.text = specificPhoto.date
+//        cell.backgroundColor = UIColor.
+//        cell.delegate = self
         return cell
     }
     
@@ -107,16 +111,15 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension ViewController: SettingsDelegate {
+extension ViewController: BackgroundColorDelegate {
     func darkModeOn() {
-        self.tableView.backgroundColor = .black
+        self.photoView.backgroundColor = .black
         self.darkModeIsOn = true
     }
     
     func darkModeOff() {
-        self.tableView.backgroundColor = .white
+        self.photoView.backgroundColor = .white
         self.darkModeIsOn = false
     }
-    
-    
+
 }

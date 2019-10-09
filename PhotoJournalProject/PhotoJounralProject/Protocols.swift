@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SettingsDelegate: AnyObject {
+protocol BackgroundColorDelegate: AnyObject {
     func darkModeOn()
     func darkModeOff()
     

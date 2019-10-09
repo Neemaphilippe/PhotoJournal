@@ -85,7 +85,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="dMn-aH-B64"/>
                                     <barButtonItem title="Gear" image="gear" catalog="system" width="143" id="eL6-87-nT1">
                                         <connections>
-                                            <action selector="itemButtonPressed:" destination="BYZ-38-t0r" id="fMt-rY-ZKl"/>
+                                            <action selector="gearButtonPressed:" destination="BYZ-38-t0r" id="m4i-0J-n3P"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -204,16 +204,14 @@
                                 <rect key="frame" x="184" y="254" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="backgroundColorSwitch:" destination="oyl-Lg-e4d" eventType="valueChanged" id="Gh6-dA-egC"/>
-                                    <action selector="backgroundColorSwitchPressed:" destination="oyl-Lg-e4d" eventType="valueChanged" id="zSY-ZS-jYU"/>
+                                    <action selector="backgroundColorSwitchPressed:" destination="oyl-Lg-e4d" eventType="valueChanged" id="Qs8-5E-O9x"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4oe-2A-vef">
                                 <rect key="frame" x="184" y="543" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="scrollViewSwitch:" destination="oyl-Lg-e4d" eventType="valueChanged" id="42i-GB-PbL"/>
-                                    <action selector="scrollViewSwitchPressed:" destination="oyl-Lg-e4d" eventType="valueChanged" id="63u-Ol-keA"/>
+                                    <action selector="scrollViewSwitchPressed:" destination="oyl-Lg-e4d" eventType="valueChanged" id="Yii-A8-s6E"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scroll View:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg6-V0-EcZ">
@@ -230,6 +228,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKi-Uj-Y74">
+                                <rect key="frame" x="20" y="44" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="oyl-Lg-e4d" eventType="touchUpInside" id="kJT-8Z-fEZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.291303119" green="0.71876823140000001" blue="0.71059703809999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="xuW-Np-a7w"/>
@@ -241,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMB-ab-0Wc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2473.913043478261" y="118.52678571428571"/>
+            <point key="canvasLocation" x="2519" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f7R-9Z-ipz">
