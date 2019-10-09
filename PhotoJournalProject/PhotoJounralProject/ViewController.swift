@@ -29,6 +29,17 @@ class ViewController: UIViewController {
         present(addPhotos!, animated: true, completion: nil)
     }
 
+    
+    @IBAction func gearButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboardd = UIStoryboard(name: "Main", bundle: nil)
+        let gearSeg = storyboardd.instantiateViewController(withIdentifier: "settingsVC") as? SettingsVC
+        present(gearSeg!, animated: true, completion: nil)
+        
+        
+        
+    }
+    
+
     override func viewWillAppear(_ animated: Bool) {
       loadData()
     }
@@ -96,3 +107,16 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension ViewController: SettingsDelegate {
+    func darkModeOn() {
+        self.tableView.backgroundColor = .black
+        self.darkModeIsOn = true
+    }
+    
+    func darkModeOff() {
+        self.tableView.backgroundColor = .white
+        self.darkModeIsOn = false
+    }
+    
+    
+}
