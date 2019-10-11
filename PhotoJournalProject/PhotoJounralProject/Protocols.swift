@@ -13,3 +13,8 @@ protocol BackgroundColorDelegate: AnyObject {
     func darkModeOff()
     
 }
+
+protocol GearScrollDelegate: AnyObject {
+    func setHorizantal()
+    func setVertical()
+}

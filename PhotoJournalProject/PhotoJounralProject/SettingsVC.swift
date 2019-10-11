@@ -22,7 +22,14 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var scrollSwitch: UISwitch!
     
     @IBAction func scrollViewSwitchPressed(_ sender: UISwitch) {
-        
+        switch sender.isOn {
+        case true:
+            scrollView = true
+        case false:
+            scrollView = false
+        default:
+            print("Not working")
+        }
     }
     
     enum DarkModeSetting: String {
@@ -30,6 +37,25 @@ class SettingsVC: UIViewController {
         case off
     }
     
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         switch switchOnOrOff {
+         case true :
+             self.backgroundSwitch.isOn = true
+         case false:
+             self.backgroundSwitch.isOn = false
+         }
+     }
+   
     @IBAction func backgroundColorSwitchPressed(_ sender: UISwitch) {
         switch sender.isOn {
         
@@ -49,22 +75,6 @@ class SettingsVC: UIViewController {
           }
       }
       
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-         switch switchOnOrOff {
-         case true :
-             self.backgroundSwitch.isOn = true
-         case false:
-             self.backgroundSwitch.isOn = false
-         }
-     }
-     
     
 
 }

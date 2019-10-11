@@ -33,9 +33,10 @@ class ViewController: UIViewController {
     
     @IBAction func gearButtonPressed(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let gearSeg = storyboard.instantiateViewController(withIdentifier: "settingsVC") as? SettingsVC
-        gearSeg?.modalPresentationStyle = .fullScreen
-        present(gearSeg!, animated: true, completion: nil)
+        let gearSeg = storyboard.instantiateViewController(withIdentifier: "settingsVC") as! SettingsVC
+        gearSeg.modalPresentationStyle = .currentContext
+        gearSeg.delegate = self
+        present(gearSeg, animated: true, completion: nil)
         
         
         
@@ -44,15 +45,25 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
       loadData()
+    
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.2918118834, green: 0.7149427533, blue: 0.7101073861, alpha: 1)
         photoView.dataSource = self
         photoView.delegate = self
         for photo in photos {
             print("Name: \(photo.description), ID:\(photo.id)")
         }
+        
+        
+        if darkModeIsOn == true {
+            darkModeOn()
+        }else {
+            darkModeOff()
+        }
+        
     }
     
     func presentsActionSheet(id: Int){
@@ -84,6 +95,22 @@ class ViewController: UIViewController {
             print(error)
         }
     }
+    
+    func scrollOptions(){
+        let layout = UICollectionViewFlowLayout()
+        
+        if scrollView == true {
+            layout.scrollDirection = .vertical
+            
+        }
+        else {
+            layout.scrollDirection = .horizontal
+            
+        }
+    }
+    
+    
+    
 }
 
 extension ViewController: UICollectionViewDataSource{
@@ -98,8 +125,11 @@ extension ViewController: UICollectionViewDataSource{
         cell.photoDescriptionLabel.text = specificPhoto.description
         cell.buttonFunction = {self.presentsActionSheet(id: specificPhoto.id)}
         cell.dateLabel.text = specificPhoto.date
-//        cell.backgroundColor = UIColor.
-//        cell.delegate = self
+        cell.delegate = self
+        
+        if darkModeIsOn {
+            cell.backgroundColor = .black
+        }
         return cell
     }
     
@@ -113,13 +143,16 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 extension ViewController: BackgroundColorDelegate {
     func darkModeOn() {
-        self.photoView.backgroundColor = .black
+        self.photoView.backgroundColor = #colorLiteral(red: 0.2918118834, green: 0.7149427533, blue: 0.7101073861, alpha: 1)
+        
         self.darkModeIsOn = true
+        photoView.reloadData()
     }
     
     func darkModeOff() {
-        self.photoView.backgroundColor = .white
+        self.photoView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.darkModeIsOn = false
+        photoView.reloadData()
     }
 
 }

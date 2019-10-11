@@ -26,4 +26,5 @@ class PhotoCell: UICollectionViewCell {
         }
     }
     
+    weak var delegate: BackgroundColorDelegate?
 }
