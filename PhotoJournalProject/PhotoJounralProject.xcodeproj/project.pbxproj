@@ -20,6 +20,7 @@
 		55B0E61B2347E6B1000806BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B0E6192347E6B1000806BC /* LaunchScreen.storyboard */; };
 		55B0E6262347E6B1000806BC /* PhotoJounralProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0E6252347E6B1000806BC /* PhotoJounralProjectTests.swift */; };
 		55B0E6312347F2F1000806BC /* addPhotoEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0E6302347F2F1000806BC /* addPhotoEntryVC.swift */; };
+		55B979DC23512A0A004CDC11 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B979DB23512A0A004CDC11 /* UserDefaults.swift */; };
 		55D18ADE234E455C002CCC43 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D18ADD234E455C002CCC43 /* SettingsVC.swift */; };
 		55D18AE0234E69B4002CCC43 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D18ADF234E69B4002CCC43 /* Protocols.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		55B0E6252347E6B1000806BC /* PhotoJounralProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJounralProjectTests.swift; sourceTree = "<group>"; };
 		55B0E6272347E6B1000806BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55B0E6302347F2F1000806BC /* addPhotoEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPhotoEntryVC.swift; sourceTree = "<group>"; };
+		55B979DB23512A0A004CDC11 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		55D18ADD234E455C002CCC43 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		55D18ADF234E69B4002CCC43 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,11 +107,12 @@
 				55D18ADF234E69B4002CCC43 /* Protocols.swift */,
 				55A41173234ACDFD00A4FB56 /* PhotoCell.swift */,
 				55A41171234AB70800A4FB56 /* PhotoInfo.swift */,
-				55B0E6142347E6B0000806BC /* Main.storyboard */,
+				55B979DB23512A0A004CDC11 /* UserDefaults.swift */,
 				55B0E6172347E6B1000806BC /* Assets.xcassets */,
 				55B0E6192347E6B1000806BC /* LaunchScreen.storyboard */,
 				55B0E61C2347E6B1000806BC /* Info.plist */,
 				553C9D49234E84C700052143 /* globalVar.swift */,
+				55B0E6142347E6B0000806BC /* Main.storyboard */,
 			);
 			path = PhotoJounralProject;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				55B0E6312347F2F1000806BC /* addPhotoEntryVC.swift in Sources */,
 				55D18AE0234E69B4002CCC43 /* Protocols.swift in Sources */,
 				55A41170234AA7DB00A4FB56 /* PersistenceHelper.swift in Sources */,
+				55B979DC23512A0A004CDC11 /* UserDefaults.swift in Sources */,
 				55B0E6112347E6B0000806BC /* SceneDelegate.swift in Sources */,
 				55A41178234BC30300A4FB56 /* PhotosPersistenceHelper.swift in Sources */,
 				55D18ADE234E455C002CCC43 /* SettingsVC.swift in Sources */,

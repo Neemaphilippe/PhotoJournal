@@ -51,6 +51,7 @@ class SettingsVC: UIViewController {
          switch switchOnOrOff {
          case true :
              self.backgroundSwitch.isOn = true
+            
          case false:
              self.backgroundSwitch.isOn = false
          }
@@ -61,6 +62,7 @@ class SettingsVC: UIViewController {
         
         case true:
             setDarkMode(setting: .on)
+            
         case false:
             setDarkMode(setting: .off)
         }
